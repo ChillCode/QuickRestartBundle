@@ -16,7 +16,7 @@ The idea is to make the common **"I stopped working, now I want to continue"** a
 
 The plugin is available here:
 
-**QuickRestartBundle:** [GitHub repository]
+**QuickRestartBundle:** [https://github.com/ChillCode/QuickRestartBundle]
 
 Feedback and suggestions are very welcome!
 
