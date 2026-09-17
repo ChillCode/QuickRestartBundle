@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * QuickRestartBundle
+ *
+ * @package QuickRestartBundle
+ *
+ * Copyright: (c) 2003 Chillcode
+ */
+
 namespace KimaiPlugin\QuickRestartBundle\Controller;
 
 use App\Repository\TimesheetRepository;

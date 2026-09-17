@@ -1,10 +1,11 @@
 <?php
 
-/*
- * This file is part of the Kimai time-tracking app.
+/**
+ * QuickRestartBundle
  *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * @package QuickRestartBundle
+ *
+ * Copyright: (c) 2003 Chillcode
  */
 
 namespace KimaiPlugin\QuickRestartBundle\EventSubscriber;
