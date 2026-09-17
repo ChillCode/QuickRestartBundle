@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="es" datatype="plaintext" original="messages.en.xliff">
+    <body>
+      <trans-unit id="at28yUY" resname="recent.stop">
+        <source>recent.stop</source>
+        <target>Parar jornada</target>
+      </trans-unit>
+      <trans-unit id="OoXBwcY" resname="recent.restart">
+        <source>recent.restart</source>
+        <target>Reanudar jornada</target>
+      </trans-unit>
+      <trans-unit id="oqa4U9C" resname="recent.empty">
+        <source>recent.empty</source>
+        <target>No hay ninguna tarea previa registrada para reanudar. Crea tu primer registro desde la tabla de horarios.</target>
+      </trans-unit>
+      <trans-unit id="0_LmbPG" resname="recent.empty_title">
+        <source>recent.empty_title</source>
+        <target>Sin tareas recientes</target>
+      </trans-unit>
+      <trans-unit id="LJAiuF0" resname="recent.empty_link">
+        <source>recent.empty_link</source>
+        <target>Ir a la tabla de horarios</target>
+      </trans-unit>
+      <trans-unit id="ZGPPfxw" resname="recent.running">
+        <source>recent.running</source>
+        <target>En ejecución</target>
+      </trans-unit>
+      <trans-unit id="4gLHXAj" resname="recent.last_running">
+        <source>recent.last_running</source>
+        <target>Última tarea realizada</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

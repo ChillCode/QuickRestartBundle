@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="messages.en.xliff">
+    <body>
+      <trans-unit id="at28yUY" resname="recent.stop">
+        <source>recent.stop</source>
+        <target>Stop activity</target>
+      </trans-unit>
+      <trans-unit id="OoXBwcY" resname="recent.restart">
+        <source>recent.restart</source>
+        <target>Restart activity</target>
+      </trans-unit>
+      <trans-unit id="oqa4U9C" resname="recent.empty">
+        <source>recent.empty</source>
+        <target>There are no previous tasks recorded to resume. Create your first record from the timesheet.</target>
+      </trans-unit>
+      <trans-unit id="0_LmbPG" resname="recent.empty_title">
+        <source>recent.empty_title</source>
+        <target>No recent tasks</target>
+      </trans-unit>
+      <trans-unit id="LJAiuF0" resname="recent.empty_link">
+        <source>recent.empty_link</source>
+        <target>Go to Timesheet</target>
+      </trans-unit>
+      <trans-unit id="ZGPPfxw" resname="recent.running">
+        <source>recent.running</source>
+        <target>In progress</target>
+      </trans-unit>
+      <trans-unit id="4gLHXAj" resname="recent.last_running">
+        <source>recent.last_running</source>
+        <target>Last task completed</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

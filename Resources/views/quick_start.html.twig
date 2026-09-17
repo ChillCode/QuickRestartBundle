@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block page_title %}{% endblock %}
+{% block page_actions %}{% endblock %}
+
+{% block main %}
+<div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 75vh;">
+    <div class="text-center w-100" style="max-width: 600px;">
+
+        {% if activeTimesheet is not null %}
+            <div class="mb-4">
+                <span class="badge bg-danger-subtle text-danger px-3 py-2 fs-6 rounded-pill text-uppercase tracking-wider">
+                    <i class="fas fa-dot-circle me-1 animate-pulse"></i> {{ 'recent.running'|trans }}
+                </span>
+                <h1 class="display-5 fw-bold mt-3 mb-1">{{ activeTimesheet.project.name }}</h1>
+                <p class="text-secondary fs-3 mb-0">{{ activeTimesheet.activity.name }}</p>
+                {% if activeTimesheet.description %}
+                    <p class="text-muted small italic mt-1">«{{ activeTimesheet.description }}»</p>
+                {% endif %}
+            </div>
+            <a
+               href="#"
+               data-href="{{ path('stop_timesheet', {'id': activeTimesheet.id}) }}"
+               class="api-link btn lh-sm btn-danger btn-lg w-100 py-5 shadow-lg d-flex flex-column align-items-center justify-content-center gap-2 border-0"
+               data-replacer="url"
+               data-event="kimai.timesheetStop kimai.timesheetUpdate"
+               data-method="PATCH"
+               data-msg-error="timesheet.stop.error"
+               data-msg-success="timesheet.stop.success"
+               accesskey="s"
+               style="border-radius: 24px; font-size: 2.2rem; font-weight: 800; letter-spacing: 1px; transition: transform 0.2s;"
+               onmouseover="this.style.transform='scale(1.03)'"
+               onmouseout="this.style.transform='scale(1)'">
+                <i class="fas fa-stop-circle display-1"></i>
+                <span class="text-wrap">{{ 'recent.stop'|trans }}</span>
+            </a>
+
+        {% else %}
+            {% if lastTimesheet is not null %}
+                <div class="mb-4">
+                    <span class="badge bg-secondary-subtle text-secondary px-3 py-2 fs-6 rounded-pill text-uppercase tracking-wider">
+                        {{ 'recent.last_running'|trans }}
+                    </span>
+                    <h1 class="display-5 fw-bold mt-3 mb-1">{{ lastTimesheet.project.name }}</h1>
+                    <p class="text-secondary fs-3 mb-0">{{ lastTimesheet.activity.name }}</p>
+                    {% if lastTimesheet.description %}
+                        <p class="text-muted small italic mt-1">«{{ lastTimesheet.description }}»</p>
+                    {% endif %}
+                </div>
+
+		        <a href="{{ path('restart_timesheet', {'id': lastTimesheet.id}) }}" 
+                    class="api-link btn lh-sm btn-success btn-lg w-100 py-5 shadow-lg d-flex flex-column align-items-center justify-content-center gap-2 border-0"
+                    data-method="PATCH"
+                    data-event="kimai.timesheetStart kimai.timesheetUpdate"
+                    data-msg-success="timesheet.start.success"
+                    data-msg-error="timesheet.start.error"
+                    style="border-radius: 24px; font-size: 2.2rem; font-weight: 800; letter-spacing: 1px; transition: transform 0.2s;"
+                    onmouseover="this.style.transform='scale(1.03)'"
+                    onmouseout="this.style.transform='scale(1)'">
+                    <i class="fas fa-play-circle display-1"></i>
+                        <span class="text-wrap">{{ 'recent.restart'|trans }}</span>
+                </a>
+            {% else %}
+                <div class="card card-md">
+                    <div class="card-body text-center py-5">
+                        <i class="fas fa-info-circle fa-3x text-muted mb-3"></i>
+                        <h3>{{ 'recent.empty_title'|trans }}</h3>
+                        <p class="text-muted">{{ 'recent.empty'|trans }}</p>
+                        <a href="{{ path('timesheet') }}" class="btn btn-primary mt-2">{{ 'recent.empty_link'|trans }}</a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
+
+    </div>
+</div>
+<script>
+document.addEventListener('kimai.timesheetStart', function() {
+    setTimeout(function() {
+        window.location.reload();
+    }, 500);
+});
+document.addEventListener('kimai.timesheetStop', function() {
+    setTimeout(function() {
+        window.location.reload();
+    }, 500);
+});
+</script>
+{% endblock %}

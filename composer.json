@@ -1,0 +1,32 @@
+{
+    "name": "chillcode/quickrestartbundle",
+    "description": "Reiniciar ultima tarea con un clic",
+    "homepage": "https://github.com/chillcode",
+    "type": "kimai-plugin",
+    "version": "1.0.0",
+    "require": {
+        "../../../vendor/kimai/kimai2-composer": "*"
+    },
+    "keywords": [
+        "kimai",
+        "kimai-plugin"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chillcode",
+            "email": "chillcode@protonmail.ch",
+            "homepage": "https://github.com/chillcode"
+        }
+    ],
+    "extra": {
+        "kimai": {
+            "require": 20000,
+            "name": "QuickRestart"
+        }
+    },
+    "scripts": {
+        "codestyle": "php-cs-fixer fix --dry-run --verbose --show-progress=none",
+        "codestyle-fix": "php-cs-fixer fix"
+    }
+}
